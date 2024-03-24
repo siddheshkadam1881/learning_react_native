@@ -1,19 +1,42 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Button, Pressable, Modal } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Button, Pressable, Modal, StatusBar, ActivityIndicator, Alert } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import React, { useState } from 'react';
 
 let logoImage = require("./assets/adaptive-icon.png")
-
+import Greet from './components/Greets';
+import LotsOfStyles from './components/LotsOfStyles'
 
 export default function App() {
   let [active, setactive] = useState(false);
+  let [visible, setvisible] = useState(true);
 
-  
+
+
+
   return (
 
 
     <View style={{ flex: 1, backgroundColor: 'plum', }}>
+
+
+      {/* {ActivityIndicator(loader) showing } */}
+      <ActivityIndicator size="large" color="red" animating={visible} />
+
+      <StatusBar backgroundColor="blue" barStyle='dark-content' />
+      
+      <Button title='Alert1' onPress={()=> Alert.alert("Invalid data!","DOB Invalid")}/>
+
+      <Button title='Alert2' onPress={()=> Alert.alert("Invalid data!","DOB Invalid", 
+      [{ text:"submit",onPress:()=>{console.log("press submit button")}},
+      { text:"cancel1",onPress:()=>{console.log("press cancel button")}},
+      { text:"cancel2",onPress:()=>{console.log("press cancel button")}},
+      { text:"cancel",onPress:()=>{console.log("press cancel button")}},
+      ])}/>
+
+
+     <Greet name="suddje"></Greet>
+
+     <LotsOfStyles></LotsOfStyles>
       {/*       <View Used for div  */}
 
       {/*       <ScrollView> Used for screen to be scroll  */}
@@ -71,9 +94,21 @@ export default function App() {
           style={{ height: 200, width: 200 }}></Image>}
 
 
-       {/* Model Working   */}
+        {/* Model Working   */}
         <View style={styles.container}>
-  
+          <Modal
+            animationType="slide"
+            style={styles.View}
+            visible={!active}
+          >
+            <View>
+              <Text> Model Content </Text>
+              <Button
+                title={"click"}
+                onPress={() => { setactive(!active) }}
+              />
+            </View>
+          </Modal>
           <Button
             title={"click"}
             onPress={() => { setactive(!active) }}
