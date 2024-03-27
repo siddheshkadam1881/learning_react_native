@@ -2,7 +2,8 @@ import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Button, Pre
 
 import React, { useState } from 'react';
 import Dimension_api from './components/Dimension_api';
-
+import WindowDimension from './components/WindowDimention';
+import SafeAreaView from './components/SafeAreaViews';
 
 import Box from './components/Box';
 
@@ -11,7 +12,12 @@ export default function App() {
     <View style={styles.container}>
       {/* <View style={styles.box}><Text>shjhshh</Text></View> */}
 
-      <Dimension_api></Dimension_api>
+      {/* <Dimension_api></Dimension_api> */}
+
+      {/* <WindowDimension></WindowDimension> */}
+
+      <SafeAreaView></SafeAreaView>
+
     </View>
   );
 }
@@ -21,14 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "plum",
     alignItems: "center",
-    justifyContent: 'center',
-  },
-  box: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'red',
-    alignItems: "center",
-    justifyContent: 'center',
+    // justifyContent: 'center',
   }
 });
 
