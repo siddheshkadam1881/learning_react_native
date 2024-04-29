@@ -6,28 +6,42 @@ import WindowDimension from './components/WindowDimention';
 import SafeAreaView from './components/SafeAreaViews';
 
 import Box from './components/Box';
+import List from './components/List';
+import FlatLists from './components/FlatLists';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      {/* <View style={styles.box}><Text>shjhshh</Text></View> */}
+    // <ScrollView>
+      <View style={styles.container}>
+        {/* <View style={styles.box}><Text>shjhshh</Text></View> */}
 
-      {/* <Dimension_api></Dimension_api> */}
+        {/* <Dimension_api></Dimension_api> */}
 
-      {/* <WindowDimension></WindowDimension> */}
+        {/* <WindowDimension></WindowDimension> */}
 
-      <SafeAreaView></SafeAreaView>
 
-    </View>
+        {/* <SafeAreaView> */}
+        {/* <List></List> */}
+
+        {/* </SafeAreaView>  */}
+
+        <FlatLists></FlatLists>
+
+
+
+      </View>
+    // </ScrollView>
+
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "plum",
-    alignItems: "center",
+    // backgroundColor: "plum",
+    // alignItems: "center",
     // justifyContent: 'center',
+
   }
 });
 

@@ -4,7 +4,6 @@ import CustomButton from "./custom/CustomButton";
 
 
 export default function SafeAreaViews() {
-    console.log("platform", Platform.OS) //get OS name
     return (
         <SafeAreaView style={styles.safeAreaView}>
             <View style={styles.containers}>
