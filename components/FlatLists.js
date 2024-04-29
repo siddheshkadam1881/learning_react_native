@@ -35,12 +35,19 @@ export default function FlatLists() {
                         </View>
                     );
                 }}
+                keyExtractor={product => product.id}
                 nestedScrollEnabled
+                ItemSeparatorComponent={(e) => {
+                    return <View style={styles.separator} />;
+                }}
+                ListEmptyComponent={
+                    <View>
+                        <Text>No List Found</Text></View>}
             />
 
 
 
-        </View>
+        </View >
 
 
     )
@@ -51,6 +58,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#f5f5f5',
         paddingTop: Platform.OS == "android" ? 25 : 0,
     },
+    separator: {
+        backgroundColor: 'red',
+        //marginBottom: 160,
+
+
+    },
+
     card: {
         backgroundColor: 'white',
         height: 500,
