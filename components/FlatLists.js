@@ -40,16 +40,17 @@ export default function FlatLists() {
                 ItemSeparatorComponent={(e) => {
                     return <View style={styles.separator} />;
                 }}
+                ListHeaderComponent={<View>
+                    <Text style={styles.listHeader}>Mobile List</Text>
+                </View>}
+                 ListFooterComponent={<View>
+                    <Text style={styles.footerHeader}>End of List</Text>
+                </View>}
                 ListEmptyComponent={
                     <View>
-                        <Text>No List Found</Text></View>}
+                        <Text>No Mobile List</Text></View>}
             />
-
-
-
         </View >
-
-
     )
 }
 
@@ -61,10 +62,7 @@ const styles = StyleSheet.create({
     separator: {
         backgroundColor: 'red',
         //marginBottom: 160,
-
-
     },
-
     card: {
         backgroundColor: 'white',
         height: 500,
@@ -73,8 +71,11 @@ const styles = StyleSheet.create({
         borderRadius: 16,
         borderWidth: 2,
         padding: 16,
-        margin: 16,
-        marginLeft: 20,
+        margin: 28,
+        marginTop: 3,
+
+        //alignContent:"center"        
+        //marginLeft: 20,
 
     },
     nameContainer: {
@@ -106,9 +107,17 @@ const styles = StyleSheet.create({
     desc: {
         fontSize: 15,
         fontWeight: 'normal',
+    },
+    listHeader: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+    footerHeader:{
+        fontSize: 24,
+        fontWeight: 'bold',
+        textAlign: 'center',
     }
-
-
 
 })
 
