@@ -43,12 +43,12 @@ export default function FlatLists() {
                 ListHeaderComponent={<View>
                     <Text style={styles.listHeader}>Mobile List</Text>
                 </View>}
-                 ListFooterComponent={<View>
+                ListFooterComponent={<View>
                     <Text style={styles.footerHeader}>End of List</Text>
                 </View>}
+                stickyHeaderIndices={[0]}
                 ListEmptyComponent={
-                    <View>
-                        <Text>No Mobile List</Text></View>}
+                    <View><Text>No Mobile List</Text></View>}
             />
         </View >
     )
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
     },
-    footerHeader:{
+    footerHeader: {
         fontSize: 24,
         fontWeight: 'bold',
         textAlign: 'center',
