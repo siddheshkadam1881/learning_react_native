@@ -8,6 +8,7 @@ import SafeAreaView from './components/SafeAreaViews';
 import Box from './components/Box';
 import List from './components/List';
 import FlatLists from './components/FlatLists';
+import Sectionlist from './components/Sectionlist';
 
 export default function App() {
   return (
@@ -25,7 +26,9 @@ export default function App() {
 
         {/* </SafeAreaView>  */}
 
-        <FlatLists></FlatLists>
+        {/* <FlatLists></FlatLists> */}
+
+        {/* <Sectionlist></Sectionlist> */}
 
 
 
